@@ -15,7 +15,7 @@ source "amazon-ebs" "ubuntu" {
   ##ami_name      = "my_first_ami_{{isotime '2006.01.02.15:04:05'}}"
   ami_name = "my_first_ami_${local.timestamp}"
   instance_type = "t2.micro"
-  region        = "${var.my_region}"
+  region        = "us-west-1"
   source_ami_filter {
     filters = {
       name                = "${var.source_ami_name}"
