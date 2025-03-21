@@ -17,10 +17,10 @@ source "amazon-ebs" "ubuntu" {
   instance_type = "t2.micro"
   region        = "us-west-1"
   source_ami_filter {
-    filters = {
-      name                = "${var.source_ami_name}"
-      root-device-type    = "ebs"
-      virtualization-type = "hvm"
+	name = "my_first_ami_*"
+      ##name                = "${var.source_ami_name}"
+      ##root-device-type    = "ebs"
+      ##virtualization-type = "hvm"
     }
     most_recent = true
     owners      = ["692859907639"] ##fixed
