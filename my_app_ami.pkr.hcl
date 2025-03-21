@@ -17,7 +17,8 @@ source "amazon-ebs" "ubuntu" {
   instance_type = "t2.micro"
   region        = "us-west-1"
   source_ami_filter {
-	name = "my_first_ami_*"
+    filters = {
+	  name = "my_first_ami_*"
       ##name                = "${var.source_ami_name}"
       ##root-device-type    = "ebs"
       ##virtualization-type = "hvm"
