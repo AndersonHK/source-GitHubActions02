@@ -20,7 +20,7 @@ source "amazon-ebs" "ubuntu" {
     filters = {
 	  ##name = "my_first_ami_*"
       ##name                = "${var.source_ami_name}"
-	  name				  = "Ubuntu*"
+	  name				  = "ubuntu*"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
